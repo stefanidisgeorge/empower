@@ -14,17 +14,17 @@ An EmPOWER network is composed of:
 controller will run your applications.
 
 - One or more Wireless Termination Points or WTPs. WTPs are the actual point
-of radio attachment for WiFi client, i.e. they are essentially WiFi Access 
+of radio attachment for WiFi clients, i.e. they are essentially WiFi Access 
 Points implementing a split-mac architecture using the EmPOWER WiFi data-path.
 
 - One or more Click Packet Processor or CPPs. CPPs are general purpose 
 computers typically equipped with multiple Ethernet interfaces. They combine
 the switching capabilities of an OpenFlow switch with the processing 
-capabilities of a server.
+capabilities of a server. Virtual Network Functions run on CPP as user-defined
+click script.
 
 Note: If you want to run EmPOWER as a WLAN Controller you do not need CPPs. 
-Converselly if you want to us EmPOWER as a NFV orchestrator you do not need 
-WTPs.
+Converselly if you want to us EmPOWER as a NFV Controller you do not need WTPs.
 
 Requirements
 -----------
@@ -32,7 +32,7 @@ Requirements
 For the controller:
 
 - One server-class machine running a recent Linux distribution (I'm currently 
-using Fedora 22 and Debian Wheezy). 
+using Fedora 23). 
 
 For the WTPs:
 
@@ -46,8 +46,7 @@ For the CPPs:
 OpenVSwitch with at least two Ethernet ports (I'm currently using Soekris 
 6501-70 boards with 12 Gigabit Ethernet Ports).
 
-
-Building a WTP from sources
+Common steps
 ---------------------
 
 Clone the EmPOWER repository and pull all the submodules:
@@ -58,6 +57,9 @@ Clone the EmPOWER repository and pull all the submodules:
   $: git submodule init
   $: git submodule update
 ```
+
+Building a WTP from sources
+---------------------
 
 Change to the "empower-openwrt" directory, update, and install all feeds:
 
