@@ -1,0 +1,58 @@
+Package: kmod-openvswitch
+Version: 3.10.49+2.3.0-1
+Depends: kernel (=3.10.49-1-1a5e76e3f0e96f0ef2d90c054f42f836), kmod-stp, kmod-ipv6, kmod-gre, kmod-lib-crc32c
+Source: feeds/openvswitch/openvswitch
+Section: kernel
+Architecture: ar71xx
+Installed-Size: 40297
+Filename: kmod-openvswitch_3.10.49+2.3.0-1_ar71xx.ipk
+Size: 40893
+MD5Sum: 86292e7c046c5099f915410257e5c15a
+SHA256sum: 4675851b1547648557ffd0e8122b9838a0692c471d5b2102a9094931f9534073
+Description:  This package contains the Open vSwitch kernel moodule and bridge compat
+ module. Furthermore, it supports OpenFlow.
+
+Package: openvswitch-common
+Version: 2.3.0-1
+Depends: libc, libpcap, libopenssl, librt, kmod-openvswitch
+Source: feeds/openvswitch/openvswitch
+Section: net
+Maintainer: Julius Schulz-Zander <julius@net.t-labs.tu-berlin.de>
+Architecture: ar71xx
+Installed-Size: 677466
+Filename: openvswitch-common_2.3.0-1_ar71xx.ipk
+Size: 671854
+MD5Sum: a88dcfd279ff7f55dcbf2e462fed8ff8
+SHA256sum: 6c315f8a25b223947dadfe740eca6b714a1061c6d6c30268591788c436443384
+Description:  openvswitch-common provides components required by both openvswitch-switch and
+
+Package: openvswitch-ipsec
+Version: 2.3.0-1
+Depends: libc, openvswitch-common
+Source: feeds/openvswitch/openvswitch
+Section: net
+Maintainer: Julius Schulz-Zander <julius@net.t-labs.tu-berlin.de>
+Architecture: ar71xx
+Installed-Size: 5413
+Filename: openvswitch-ipsec_2.3.0-1_ar71xx.ipk
+Size: 6041
+MD5Sum: 14b5c7b22e873a8822a1a9644f4473c2
+SHA256sum: 63a61f7ae7e8da81846a53d786d3365829a5ab187db014f5557c01e9d1ab95cd
+Description:  The ovs-monitor-ipsec script provides support for encrypting GRE tunnels with 
+ IPsec.
+
+Package: openvswitch-switch
+Version: 2.3.0-1
+Depends: libc, openvswitch-common
+Source: feeds/openvswitch/openvswitch
+Section: net
+Maintainer: Julius Schulz-Zander <julius@net.t-labs.tu-berlin.de>
+Architecture: ar71xx
+Installed-Size: 1519952
+Filename: openvswitch-switch_2.3.0-1_ar71xx.ipk
+Size: 1509017
+MD5Sum: 9495a2dc1a92ea030263bdbfabe3ede1
+SHA256sum: 22a0196ddaff42696031400fff1d72ae343b17ade8859ac3cfe3cbefb9eae3b6
+Description:  openvswitch-switch provides the userspace components and utilities for the
+ Open vSwitch kernel-based switch.
+
