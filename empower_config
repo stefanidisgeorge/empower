@@ -1,7 +1,12 @@
 config empower general
     option "master_ip" "10.123.0.254"
     option "master_port" "4433"
-    option "network" "lan"
+    option "network" "wan"
     option "interface" "empower0"
+    option "static_rate" "false"
+    option "no_rx_stats" "false"
+    option "no_stats" "false"
+    option "no_signalling_stats" "false"
     list "ifname" "empower0"
+
     list "debugfs" "/sys/kernel/debug/ieee80211/phy0/ath9k/bssid_extra"
