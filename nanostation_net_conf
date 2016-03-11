@@ -28,5 +28,7 @@ config device
   	list ifname 'eth0.1'
 
 config interface 'wan'
-	option ifname 'br-ovs'
-	option proto 'dhcp'
+    option ifname 'br-ovs'
+    option proto 'static'
+    option ipaddr '10.123.0.1'
+    option netmask '255.255.255.0'
