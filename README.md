@@ -1,9 +1,21 @@
 EmPOWER
 =======
 
-EmPOWER is a SDN/NFV framework fo Enterprise WLANs. EmPOWER is an open source
-project providing a WiFi datapath implementation, a reference Controller and a
-Python-based SDK. 
+EmPOWER is a Network Operating System for Enterprise WLANs. EmPOWER is open 
+source and consists of the following components:
+
+- empower-runtime, a Python-based controller and the associated SDK;
+- empower-agent, a WiFi datapath implementation implemented using the Click
+modular router;
+- empower-packages, a set of packages for the OpenWRT Operating System;
+- empower-openwrt, a branch of OpenWRT 14.07 including some patches to both
+the mac80211 stack and to the netifd package.
+
+It is reccomended to build EmPOWER using the OpenWRT branch available in this
+repository. This is due to the fact that the WiFi datapath requires two patches
+to mac80211 stack. Moreover, this branch also includes a patch to netifd for
+integrating OpenVSwitch with the UCI-based network configuration system used
+by OpenWRT.
 
 Terminology
 -----------
@@ -159,7 +171,7 @@ multi core machine you can increase the compilation speed by increasing the
 number of parallel builds with th "-j" option.
 
 ```
-  $: make -j 2
+  $: make -j 5
 ```
 
 Once the compilation is done, the compiled image can be found in the 
