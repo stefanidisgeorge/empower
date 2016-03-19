@@ -1,12 +1,12 @@
 [submodule "empower-agent"]
 	path = empower-agent
 	url = https://github.com/rriggio/empower-agent.git
-[submodule "empower-packages"]
-	path = empower-packages
-	url = https://github.com/rriggio/empower-packages.git
-[submodule "empower-openwrt"]
-	path = empower-openwrt
-	url = https://github.com/rriggio/empower-openwrt.git
 [submodule "empower-runtime"]
 	path = empower-runtime
 	url = https://github.com/rriggio/empower-runtime.git
+[submodule "empower-openwrt-15.05"]
+	path = empower-openwrt-15.05
+	url = https://github.com/rriggio/empower-openwrt-15.05.git
+[submodule "empower-packages-15.05"]
+	path = empower-packages-15.05
+	url = https://github.com/rriggio/empower-packages-15.05.git
