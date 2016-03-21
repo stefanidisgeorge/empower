@@ -1,7 +1,7 @@
 config empower general
     option "master_ip" "10.123.0.254"
     option "master_port" "4433"
-    option "network" "wan"
+    option "network" "lan"
     option "interface" "empower0"
     option "static_rate" "false"
     option "no_rx_stats" "false"

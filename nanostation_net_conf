@@ -25,10 +25,14 @@ config globals 'globals'
 config device
   	option name 'br-ovs'
   	option type 'ovs'
-  	list ifname 'eth0.1'
+    list ifname 'eth0.1'
 
-config interface 'wan'
-    option ifname 'br-ovs'
-    option proto 'static'
-    option ipaddr '10.123.0.1'
-    option netmask '255.255.255.0'
+
+    config interface 'wan'
+
+        option ifname 'eth0.1'
+        option proto 'static'
+        option ipaddr '10.123.0.1'
+        option netmask '255.255.255.0'
+        option gateway '10.123.0.254'
+        option dns '8.8.8.8'
