@@ -22,16 +22,13 @@ config interface 'loopback'
 config globals 'globals'
   option ula_prefix 'fd37:b8cb:1142::/48'
 
-config device
-  	option name 'br-ovs'
-  	option type 'ovs'
-    list ifname 'eth0.1'
 
 
-    config interface 'wan'
 
-        option ifname 'eth0.1'
-        option proto 'static'
+    config interface 'lan'
+        option type 'bridge'
+        option ifname' 'eth0.1'
+        option 'proto' 'static'
         option ipaddr '10.123.0.1'
         option netmask '255.255.255.0'
         option gateway '10.123.0.254'
