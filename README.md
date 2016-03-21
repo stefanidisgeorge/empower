@@ -163,7 +163,7 @@ Run the configuration application:
 ```
 
 From the menu select the Target System (e.g. x86) and the Subtarget (e.g. 
-PCEngines alix2). Then select "Network -> empower-agent" and 
+AMD Geode based systems). Then select "Network -> empower-agent" and 
 "Network -> openvswitch". You may also want to compile the LuCI web interface
 by selecting "LuCI -> Collections -> luci".
 
