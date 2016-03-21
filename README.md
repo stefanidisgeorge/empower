@@ -1,9 +1,21 @@
 EmPOWER
 =======
 
-EmPOWER is a SDN/NFV framework fo Enterprise WLANs. EmPOWER is an open source
-project providing a WiFi datapath implementation, a reference Controller and a
-Python-based SDK. 
+EmPOWER is a Network Operating System for Enterprise WLANs. EmPOWER is open 
+source and consists of the following components:
+
+- empower-runtime, a Python-based controller and the associated SDK;
+- empower-agent, a WiFi datapath implementation implemented using the Click
+modular router;
+- empower-packages-15.05, a set of packages for the OpenWRT Operating System;
+- empower-openwrt-15.05, a branch of OpenWRT 15.05 including some patches to 
+the mac80211 stack and to the netifd package.
+
+It is reccomended to build EmPOWER using the OpenWRT branch available in this
+repository. This is due to the fact that the WiFi datapath requires a patch
+to mac80211 stack and. Moreover, this branch also includes a patch to netifd 
+for integrating OpenVSwitch with the UCI-based network configuration system 
+used by OpenWRT.
 
 Terminology
 -----------
@@ -65,7 +77,7 @@ Change to the "empower-openwrt" directory, update, and install all feeds:
 
 
 ```
-  $: cd empower-openwrt
+  $: cd empower-openwrt-15.05
   $: ./scripts/feeds update -a
   $: ./scripts/feeds install -a
 ```
@@ -151,15 +163,16 @@ Run the configuration application:
 ```
 
 From the menu select the Target System (e.g. x86) and the Subtarget (e.g. 
-PCEngines alix2). Then select "Network -> empower-agent" and 
-"Network -> openvswitch-switch".
+AMD Geode based systems). Then select "Network -> empower-agent" and 
+"Network -> openvswitch". You may also want to compile the LuCI web interface
+by selecting "LuCI -> Collections -> luci".
 
 Save the configuration and exit, then start the compilation. If you have a 
 multi core machine you can increase the compilation speed by increasing the
 number of parallel builds with th "-j" option.
 
 ```
-  $: make -j 2
+  $: make -j 5
 ```
 
 Once the compilation is done, the compiled image can be found in the 
